@@ -19,6 +19,10 @@ const currentIndexes = { before: 0, during: 0, after: 0 };
 var leftAmount = 0;
 var rightAmount = 0;
 
+document.querySelector("#journey").addEventListener("click", () => {
+  console.log("YOU ARE NOT BARD. STOP.");
+});
+
 document.querySelectorAll("#arrow-left-top").forEach((element) => {
   element.addEventListener("click", () => {
     if (leftAmount >= rightAmount) {
