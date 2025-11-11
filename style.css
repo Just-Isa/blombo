@@ -317,6 +317,9 @@ footer {
 .ad-1-big .thumb {
   width: 100%;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 440px) {
