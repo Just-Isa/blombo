@@ -16,8 +16,62 @@ const imageSets = {
 };
 
 const currentIndexes = { before: 0, during: 0, after: 0 };
+var leftAmount = 0;
+var rightAmount = 0;
 
-document.querySelector("#");
+document.querySelectorAll("#arrow-left-top").forEach((element) => {
+  element.addEventListener("click", () => {
+    if (leftAmount >= rightAmount) {
+      leftAmount = 0;
+      rightAmount = 0;
+    } else if (leftAmount < rightAmount - 1) {
+      leftAmount = 0;
+      rightAmount = 0;
+    } else {
+      leftAmount++;
+    }
+
+    if (leftAmount == 2 && rightAmount == 2) {
+      const img = document.createElement("img");
+      img.src = "images/ads/grag.gif";
+      img.style.position = "fixed";
+      img.style.opacity = 1;
+      img.style.top = "50%";
+      img.style.left = "50%";
+      img.spe;
+      img.style.transform = "translate(-50%, -50%)";
+      img.style.width = "1000px";
+      img.style.zIndex = "9999";
+      img.style.borderRadius = "15px";
+      img.style.boxShadow = "0 0 20px red";
+      document.body.appendChild(img);
+
+      setTimeout(() => {
+        img.remove();
+      }, 1000);
+
+      const audio = new Audio("mp/boom.mp3");
+      audio.play();
+
+      leftAmount = 0;
+      rightAmount = 0;
+    }
+  });
+});
+
+document.querySelectorAll("#arrow-right-top").forEach((element) => {
+  element.addEventListener("click", () => {
+    if (leftAmount > rightAmount) {
+      leftAmount = 0;
+      rightAmount = 0;
+    } else if (leftAmount < rightAmount - 1) {
+      leftAmount = 0;
+      rightAmount = 0;
+    } else {
+      rightAmount++;
+    }
+  });
+});
 
 document.querySelectorAll(".arrow").forEach((arrow) => {
   arrow.addEventListener("click", () => {
