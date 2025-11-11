@@ -17,6 +17,8 @@ const imageSets = {
 
 const currentIndexes = { before: 0, during: 0, after: 0 };
 
+document.querySelector("#");
+
 document.querySelectorAll(".arrow").forEach((arrow) => {
   arrow.addEventListener("click", () => {
     const stage = arrow.dataset.stage;
@@ -92,7 +94,7 @@ function triggerBombaEasterEgg() {
   img.style.boxShadow = "0 0 20px yellow";
   document.body.appendChild(img);
 
-  const audio = new Audio("mp/gragup.mp3");
+  const audio = new Audio("mp/jens.mp3");
   audio.play();
 
   const allDivs = Array.from(document.querySelectorAll("div"));
